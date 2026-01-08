@@ -18,7 +18,6 @@ export class HttpErrorHandlerService {
     // Minimal default behavior: log helpful info.
     // Future: integrate notification center + structured telemetry.
     if (error instanceof HttpErrorResponse) {
-      // eslint-disable-next-line no-console
       console.error('[HTTP ERROR]', {
         status: apiError.status,
         message: apiError.message,
@@ -27,7 +26,6 @@ export class HttpErrorHandlerService {
         details: apiError.details,
       });
     } else {
-      // eslint-disable-next-line no-console
       console.error('[ERROR]', apiError);
     }
 

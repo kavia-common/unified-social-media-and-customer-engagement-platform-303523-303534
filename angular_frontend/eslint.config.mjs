@@ -25,8 +25,15 @@ export default [
         beforeEach: "readonly",
         it: "readonly",
         expect: "readonly",
+
         // Browser globals
         HTMLElement: "readonly",
+        HTMLDivElement: "readonly",
+        HTMLInputElement: "readonly",
+        Event: "readonly",
+        KeyboardEvent: "readonly",
+        queueMicrotask: "readonly",
+
         // Node.js globals
         process: "readonly",
         console: "readonly"
