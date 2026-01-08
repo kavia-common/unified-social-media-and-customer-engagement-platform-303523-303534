@@ -717,7 +717,11 @@ import { InboxConversation, InboxMessage } from '../inbox/inbox.models';
   ],
 })
 export class ChatPage implements AfterViewChecked {
-  constructor(private readonly inbox: MockInboxService) {}
+  constructor(private readonly inbox: MockInboxService) {
+    // Best-effort: connect to hub + load conversations when this page is opened.
+    // If not authenticated, guard should prevent navigation here anyway.
+    void this.inbox.ensureLiveConnected();
+  }
 
   @ViewChild('threadScroller') private readonly threadScroller?: ElementRef<HTMLDivElement>;
   @ViewChild('searchInput') private readonly searchInput?: ElementRef<HTMLInputElement>;
