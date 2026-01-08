@@ -1,0 +1,5 @@
+# Fetched OpenAPI (dev-time artifact)
+openapi.json
+
+# Generated client code
+client/
