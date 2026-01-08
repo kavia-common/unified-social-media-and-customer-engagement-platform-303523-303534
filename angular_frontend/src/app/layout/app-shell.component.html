@@ -1,0 +1,54 @@
+<div class="shell">
+  <aside class="sidebar" aria-label="Primary">
+    <div class="brand" aria-label="Brand">
+      <div class="brand-mark" aria-hidden="true">U</div>
+      <div class="brand-text">
+        <div class="brand-name">Unified Engagement</div>
+        <div class="brand-subtitle">Ocean Professional</div>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a class="nav-link" routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        Dashboard
+      </a>
+      <a class="nav-link" routerLink="/post-management" routerLinkActive="active">Post Management</a>
+      <a class="nav-link" routerLink="/calendar" routerLinkActive="active">Calendar</a>
+      <a class="nav-link" routerLink="/chat" routerLinkActive="active">Chat / Inbox</a>
+      <a class="nav-link" routerLink="/accounts" routerLinkActive="active">Accounts</a>
+      <a class="nav-link" routerLink="/events" routerLinkActive="active">Events</a>
+      <a class="nav-link" routerLink="/integrations" routerLinkActive="active">Integrations</a>
+      <a class="nav-link" routerLink="/website-activity" routerLinkActive="active">Website Activity</a>
+      <a class="nav-link" routerLink="/agent-studio" routerLinkActive="active">Agent Studio</a>
+      <a class="nav-link" routerLink="/agent-templates" routerLinkActive="active">Agent Templates</a>
+      <a class="nav-link" routerLink="/user-management" routerLinkActive="active">User Management</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="hint">Backend API: :3001 (future)</div>
+      <div class="hint">Realtime: SignalR (future)</div>
+    </div>
+  </aside>
+
+  <div class="content">
+    <header class="topbar" aria-label="Top bar">
+      <div class="topbar-left">
+        <div class="page-title">Unified Social Media & Customer Engagement</div>
+        <div class="page-subtitle">Manage posts, inbox, agents, and integrations</div>
+      </div>
+
+      <div class="topbar-right">
+        <button class="btn btn-secondary" type="button" aria-label="Notifications (placeholder)" title="Notifications">
+          Notifications
+        </button>
+        <button class="btn" type="button" aria-label="User menu (placeholder)" title="User menu">
+          Admin
+        </button>
+      </div>
+    </header>
+
+    <main class="main" aria-label="Main content">
+      <router-outlet />
+    </main>
+  </div>
+</div>
